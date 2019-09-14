@@ -12,7 +12,7 @@ class CLI
   end
 
   #start
-  #class method for running through the program.
+  #Class method for running through the program. Responisble for looping the CLI.
   def self.start
     puts "These are the Top 10 Hiking Spots in PA listed in order from number 1 to 10."
     puts ""
