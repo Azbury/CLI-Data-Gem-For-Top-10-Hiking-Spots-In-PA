@@ -20,7 +20,7 @@ class CLI
   end
 
   def self.print_hikingspot_description (number)
-    hikingspot = HikingSpot.all.detect {|hikingspot| hikingspot.title.include?(number)}
+    hikingspot = HikingSpot.all.detect {|hikingspot| hikingspot.title.include?(number + '.')}
     puts hikingspot.description
   end
 end
