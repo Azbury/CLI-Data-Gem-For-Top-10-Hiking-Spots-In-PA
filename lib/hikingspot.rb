@@ -17,7 +17,7 @@ class HikingSpot
     titles = Scraper.scrape_spot_titles
     descriptions = Scraper.scrape_spot_descriptions
     titles.each_with_index do |title, i|
-      HikingSpot.new(title, descriptions[i - 1])
+      HikingSpot.new(title, descriptions[i])
     end
   end
 end
