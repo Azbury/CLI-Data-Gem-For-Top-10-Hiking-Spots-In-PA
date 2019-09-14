@@ -9,5 +9,9 @@ class Scraper
     spot_title_array
   end
 
-
+  def self.scrape_spot_descriptions
+    spot_description_array = []
+    self.get_page.css('.gallery-description').each {|description| spot_description_array << description.text}
+    spot_description_array
+  end
 end
