@@ -10,14 +10,17 @@ class CLI
     puts ""
     CLI.print_hikingspot_titles
     puts ""
-    puts "Type in the title of hiking spot if you would like to see a description of a specific hiking spot."
+    puts "Type in a number between 1-10 if you would like to see a description of a specific hiking spot."
+    input = gets.strip
+    CLI.print_hikingspot_description(input)
   end
 
   def self.print_hikingspot_titles
     HikingSpot.all.each {|hikingspot| puts hikingspot.title}
   end
 
-  def self.print_hikingspot_description (title)
-    HikingSpot.all.detect {|hikingspot| hikingspot.title == title}
+  def self.print_hikingspot_description (number)
+    hikingspot = HikingSpot.all.detect {|hikingspot| hikingspot.title.include?(number)}
+    puts hikingspot.description
   end
 end
