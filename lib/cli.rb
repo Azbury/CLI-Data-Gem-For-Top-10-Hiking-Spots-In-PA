@@ -14,13 +14,24 @@ class CLI
   #start
   #class method for running through the program.
   def self.start
-    puts "These are the top 10 Hiking Spots in PA listed in order from number 1 to 10."
+    puts "These are the Top 10 Hiking Spots in PA listed in order from number 1 to 10."
     puts ""
     CLI.print_hikingspot_titles
     puts ""
     puts "Type in a number between 1-10 if you would like to see a description of a specific hiking spot."
     input = gets.strip
     CLI.print_hikingspot_description(input)
+    puts "Would you like to view another description of a cool hiking spot in PA? (Y or N)"
+    input = gets.strip
+    until input == "Y" || input == "N"
+      puts "Please enter either Y or N."
+      input = gets.strip
+    end
+    if input == "Y"
+      CLI.start
+    else
+      puts "Thank you for checking out the Top 10 Hiking Spots in PA!!!"
+    end
   end
 
   #print_hikingspot_titles
