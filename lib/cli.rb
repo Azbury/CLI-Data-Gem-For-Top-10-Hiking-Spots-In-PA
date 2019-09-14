@@ -6,6 +6,7 @@ class CLI
   end
 
   def self.start
+    puts "These are the top 10 Hiking Spots in PA listed in order from number 1 to 10."
     CLI.print_hikingspot_titles
   end
 
