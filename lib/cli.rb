@@ -1,5 +1,5 @@
-#CLI
-#class for storing all the information needed for the CLI.
+#Class CLI
+#Class for storing all the information needed for the CLI.
 #Call on methods within the HikingSpot class to retrieve information for the CLI.
 class CLI
 
