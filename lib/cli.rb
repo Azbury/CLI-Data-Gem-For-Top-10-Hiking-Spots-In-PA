@@ -44,8 +44,7 @@ class CLI
   #class method for printing_hikingspot_description based on the number associated with
   #the title.
   def self.print_hikingspot_description (number)
-    hikingspot = HikingSpot.all.detect {|hikingspot| hikingspot.title.include?(number)}
-    puts hikingspot.description
+    puts HikingSpot.all.detect {|hikingspot| hikingspot.title.include?(number)}.description
   end
 
 end
