@@ -4,7 +4,7 @@ This Ruby Program provides a CLI to view the top 10 hiking spots in PA from the 
 
 ## Installation
 
-  $ git clone https://github.com/Azbury/Top-10-Hiking-Spots-In-PA-CLI.git
+    $ git clone https://github.com/Azbury/Top-10-Hiking-Spots-In-PA-CLI.git
 
 ## Usage
 
