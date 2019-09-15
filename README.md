@@ -8,6 +8,10 @@ This Ruby Program provides a CLI to view the top 10 hiking spots in PA from the 
 
 ## Usage
 
+Type command below and follow the on screen prompts
+
+    $ ruby bin/console
+
 ## Contributing
 
 ## License
