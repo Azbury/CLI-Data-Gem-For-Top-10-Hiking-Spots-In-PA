@@ -20,7 +20,13 @@ class CLI
     puts ""
     puts "Type in a number between 1-10 if you would like to see a description of a specific hiking spot."
     input = gets.strip
+    until input.to_i.between?(1, 10)
+      puts "Please enter a number between 1-10."
+      input = gets.strip
+    end
+    puts ""
     CLI.print_hikingspot_description(input)
+    puts ""
     puts "Would you like to view another description of a cool hiking spot in PA? (Y or N)"
     input = gets.strip
     until input == "Y" || input == "N"
@@ -30,6 +36,7 @@ class CLI
     if input == "Y"
       CLI.start
     else
+      puts ""
       puts "Thank you for checking out the Top 10 Hiking Spots in PA!!!"
     end
   end
