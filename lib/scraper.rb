@@ -21,7 +21,7 @@ class Scraper
   #those individual arrays in a larger array which will get returned at the end.
   def self.scrape_titles_and_descriptions
     articles_array = []
-    items = doc.css("div#gallery-1 .gallery-item")
+    items = self.get_page.css("div#gallery-1 .gallery-item")
     articles = items.select{|item| item.css("figcaption.gallery-caption").count != 0}
     articles.each do |article|
       article_array = []
@@ -30,25 +30,6 @@ class Scraper
       articles_array << article_array
     end
     articles_array
-  end
-  #scrape_spot_titles
-  #Class method that uses the .css method from Nokogiri to retrieve the titles
-  #based on the class tag on the website. This method returns all the titles as
-  #an array.
-  def self.scrape_spot_titles
-    spot_title_array = []
-    self.get_page.css('figcaption.gallery-caption').children.each {|title| spot_title_array << title.text}
-    spot_title_array
-  end
-
-  #scrape_spot_descriptions
-  #Class method that uses the .css method from Nokogiri to retrieve the descriptions
-  #based on the class tag on the webstie. This method returns all the descriptions
-  #as an array.
-  def self.scrape_spot_descriptions
-    spot_description_array = []
-    self.get_page.css('.gallery-description').each {|description| spot_description_array << description.text}
-    spot_description_array
   end
 
 end
