@@ -13,7 +13,7 @@ class Scraper
   end
 
   #scrape_titles_and_descriptions
-  ##Class method that uses the .css method from Nokogiri to retrieve the utems
+  #Class method that uses the .css method from Nokogiri to retrieve the utems
   #based on the class tag on the website. Then using the .css method again to
   #eliminate all the items that do not have a title class tag. After that the method
   #will use the .css method again to scrape the title and description and store them
