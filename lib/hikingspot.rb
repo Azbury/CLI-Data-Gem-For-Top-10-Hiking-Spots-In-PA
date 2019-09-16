@@ -29,10 +29,9 @@ class HikingSpot
   #Class method for creating HikingSpot objects from data scraped in the class
   #Scraper.
   def self.new_from_list
-    titles = Scraper.scrape_spot_titles
-    descriptions = Scraper.scrape_spot_descriptions
-    titles.each_with_index do |title, i|
-      HikingSpot.new(title, descriptions[i])
+    articles = Scraper.scrape_titles_and_descriptions
+    articles.each do |article|
+      HikingSpot.new(article[0], article[1])
     end
   end
 
