@@ -31,6 +31,7 @@ class HikingSpot
   def self.new_from_list
     articles = Scraper.scrape_titles_and_descriptions
     articles.each do |article|
+      #article[0] is the title, article[1] is the description
       HikingSpot.new(article[0], article[1])
     end
   end
