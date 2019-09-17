@@ -6,9 +6,9 @@ class Top10HikingSpots::CLI
   #call
   #class method for making the initial call to the CLI class.
   def self.call
-    HikingSpot.new_from_list
+    Top10HikingSpots::HikingSpot.new_from_list
     puts "Welcome to the Top 10 Hiking Spots in Pennsalvania."
-    CLI.start
+    self.start
   end
 
   #start
@@ -16,7 +16,7 @@ class Top10HikingSpots::CLI
   def self.start
     puts "These are the Top 10 Hiking Spots in PA listed in order from number 1 to 10."
     puts ""
-    CLI.print_hikingspot_titles
+    self.print_hikingspot_titles
     puts ""
     puts "Type in a number between 1-10 if you would like to see a description of a specific hiking spot."
     input = gets.strip
@@ -25,7 +25,7 @@ class Top10HikingSpots::CLI
       input = gets.strip
     end
     puts ""
-    CLI.print_hikingspot_description(input)
+    self.print_hikingspot_description(input)
     puts ""
     puts "Would you like to view another description of a cool hiking spot in PA? (Y or N)"
     input = gets.strip
@@ -34,7 +34,7 @@ class Top10HikingSpots::CLI
       input = gets.strip
     end
     if input == "Y"
-      CLI.start
+      self.start
     else
       puts ""
       puts "Thank you for checking out the Top 10 Hiking Spots in PA!!!"
@@ -44,14 +44,14 @@ class Top10HikingSpots::CLI
   #print_hikingspot_titles
   #class method for print_hikingspot_titles from hikingspot class.
   def self.print_hikingspot_titles
-    HikingSpot.all.each {|hikingspot| puts hikingspot.title}
+    Top10HikingSpots::HikingSpot.all.each {|hikingspot| puts hikingspot.title}
   end
 
   #print_hikingspot_description
   #class method for printing_hikingspot_description based on the number associated with
   #the title.
   def self.print_hikingspot_description (number)
-    puts HikingSpot.all.detect {|hikingspot| hikingspot.title.include?(number)}.description
+    puts Top10HikingSpots::HikingSpot.all.detect {|hikingspot| hikingspot.title.include?(number)}.description
   end
 
 end
