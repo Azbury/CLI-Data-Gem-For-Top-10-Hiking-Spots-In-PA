@@ -2,7 +2,7 @@
 #Objects to store the data that is scraped using the class Scraper
 #stores the hiking spots title and description and maintains and array of all the
 #instaces of HikingSpots
-class HikingSpot
+class Top10HikingSpots::HikingSpot
 
   #class variable to store all instances of the objects HikingSpot
   @@all = []

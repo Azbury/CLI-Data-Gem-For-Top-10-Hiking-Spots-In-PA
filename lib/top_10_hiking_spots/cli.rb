@@ -1,7 +1,7 @@
 #Class CLI
 #Class for storing all the information needed for the CLI.
 #Call on methods within the HikingSpot class to retrieve information for the CLI.
-class CLI
+class Top10HikingSpots::CLI
 
   #call
   #class method for making the initial call to the CLI class.

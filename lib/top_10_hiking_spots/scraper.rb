@@ -3,7 +3,7 @@
 #in the class method get_page. The class will more specifically scrape the
 #title of the top 10 hiking spots and their description based upon this websites
 #opinion.
-class Scraper
+class Top10HikingSpots::Scraper
 
   #get_page
   #Class method the uses Nokogiri and Open-URI to retrieve the website in
