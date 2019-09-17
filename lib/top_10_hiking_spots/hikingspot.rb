@@ -36,4 +36,12 @@ class Top10HikingSpots::HikingSpot
     end
   end
 
+  #find_by_word
+  #Class method for finding an instance of an article based on a word passed
+  #in through a parameter then comparing it to the titles of the individual
+  #articles
+  def self.find_by_word (word)
+    self.all.select {|article| article.title.include?(name)}
+  end
+
 end
