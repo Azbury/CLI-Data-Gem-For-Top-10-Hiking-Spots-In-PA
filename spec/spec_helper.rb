@@ -1,6 +1,6 @@
+require_relative "../lib/enviroment.rb"
 require_relative "../lib/top_10_hiking_spots/scraper.rb"
 require_relative "../lib/top_10_hiking_spots/hikingspot.rb"
-require_relative "../lib/enviroment.rb"
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
 
